@@ -71,9 +71,24 @@ if generate:
 
     with st.spinner("🧠 MailBrain is thinking..."):
 
-        result = orchestrator.generate_email(
-            user_request
-        )
+        try:
+
+            result = orchestrator.generate_email(
+                user_request
+            )
+
+        except RuntimeError as e:
+
+            st.error(
+                "🚦 Gemini API is currently busy.\n\n"
+                "Please wait a moment and try again."
+            )
+
+            with st.expander("Technical Details"):
+
+                st.code(str(e))
+
+            st.stop()
 
     progress.progress(100)
 
