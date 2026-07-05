@@ -4,16 +4,16 @@
 
 ### AI-Powered Multi-Agent Email Assistant
 
-Generate professional emails using an intelligent Multi-Agent AI workflow powered by Google Gemini.
+Generate professional, context-aware emails using an intelligent **Multi-Agent AI Workflow** powered by **Google Gemini**.
 
-<br>
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
+[![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)]()
+[![Google Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)]()
+[![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)]()
 
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
+### 🌐 Live Demo
 
----
+**https://maillife.streamlit.app**
 
 *"Don't just generate emails. Let AI think before it writes."*
 
@@ -21,95 +21,55 @@ Generate professional emails using an intelligent Multi-Agent AI workflow powere
 
 ---
 
+# 📸 Preview
+
+## 🏠 Home
+
+<p align="center">
+<img src="assets/home.png" width="900">
+</p>
+
+---
+
+## 📧 Final Generated Email
+
+<p align="center">
+<img src="assets/final.png" width="900">
+</p>
+
+---
+
 # 🚀 Overview
 
-MailLife is an AI-powered email assistant built with a **Multi-Agent Architecture**.
+MailLife is an AI-powered email assistant built using a **Multi-Agent Architecture**.
 
-Instead of asking one AI to generate an email directly, MailLife divides the task into multiple intelligent agents that collaborate to produce higher-quality results.
+Instead of relying on a single LLM prompt, MailLife divides the workflow into specialized AI agents.
 
-Each agent has a specific responsibility, making the generated email more accurate, professional, and reliable.
+Each agent focuses on a single responsibility:
 
----
+- 🧠 Understand the user's request
+- ✍ Generate a professional email
+- 🔍 Review and improve the result
+- 📊 Record execution metrics
 
-# ✨ Features
-
-## 🧠 MailBrain
-
-Analyze the user's request before writing.
-
-✔ Detect user intent
-
-✔ Identify recipient
-
-✔ Understand email purpose
-
-✔ Extract important information
-
-✔ Determine language
-
-✔ Determine writing tone
+This approach produces emails that are **more accurate, professional, and reliable** than a traditional single-prompt workflow.
 
 ---
 
-## ✍ MailWriter
+# ✨ Key Features
 
-Generate a complete professional email.
-
-✔ Subject Generation
-
-✔ Professional Formatting
-
-✔ Natural Writing Style
-
-✔ Context-aware Response
-
----
-
-## 🔍 MailReviewer
-
-Review and improve the generated email.
-
-✔ Grammar Checking
-
-✔ Professional Tone Enhancement
-
-✔ Quality Score
-
-✔ Suggested Improvements
+| Feature | Description |
+|---------|-------------|
+| 🧠 MailBrain | Analyze intent, recipient, language, and tone |
+| ✍ MailWriter | Generate professional email drafts |
+| 🔍 MailReviewer | Improve grammar, clarity, and professionalism |
+| 📊 Observability | Monitor AI calls and execution time |
+| 📥 Export | Download email as TXT or JSON |
+| 🎨 Modern UI | Beautiful dashboard built with Streamlit |
 
 ---
 
-## 📊 Observability
-
-Monitor the AI workflow.
-
-✔ Total AI Calls
-
-✔ Execution Time
-
-✔ Average Response Time
-
-✔ Agent Timeline
-
----
-
-## 🎨 Modern User Interface
-
-Built with Streamlit.
-
-✔ Responsive Layout
-
-✔ Interactive Tabs
-
-✔ Download TXT
-
-✔ Download JSON
-
-✔ Beautiful Dashboard
-
----
-
-# 🏗 Multi-Agent Architecture
+# 🏗 Multi-Agent Workflow
 
 ```text
                     User Request
@@ -120,17 +80,40 @@ Built with Streamlit.
                           │
                           ▼
                 ✍ MailWriter Agent
-              Generate Email Draft
+             Generate Email Draft
                           │
                           ▼
                🔍 MailReviewer Agent
-            Improve & Score Quality
+          Review & Improve Draft
                           │
                           ▼
                  📊 Observability
                           │
                           ▼
-                    Final Email
+                   Final Email
+```
+
+---
+
+# ⚙ How It Works
+
+```text
+User Input
+      │
+      ▼
+MailBrain analyzes the request
+      │
+      ▼
+MailWriter creates the email draft
+      │
+      ▼
+MailReviewer enhances the quality
+      │
+      ▼
+Observability records execution
+      │
+      ▼
+Download Final Email
 ```
 
 ---
@@ -149,6 +132,8 @@ MailLife
 │   ├── gemini_client.py
 │   └── orchestrator.py
 │
+├── prompts/
+│
 ├── ui/
 │   ├── components.py
 │   ├── sidebar.py
@@ -156,45 +141,17 @@ MailLife
 │   └── timeline.py
 │
 ├── utils/
-│   ├── observer.py
-│   └── validator.py
+│
+├── assets/
+│   ├── home.png
+│   └── final.png
 │
 ├── streamlit_app.py
-├── app.py
 ├── requirements.txt
 └── README.md
 ```
 
 ---
-
-# ⚙ How It Works
-
-```text
-1. User describes the email.
-
-        ↓
-
-2. MailBrain analyzes the request.
-
-        ↓
-
-3. MailWriter creates the draft.
-
-        ↓
-
-4. MailReviewer improves the draft.
-
-        ↓
-
-5. Observability records every step.
-
-        ↓
-
-6. User downloads the final email.
-```
-
----
-
 
 # 🛠 Installation
 
@@ -204,7 +161,7 @@ Clone the repository
 git clone https://github.com/Reinerbroww/MailLife.git
 ```
 
-Go to the project folder
+Move into the project
 
 ```bash
 cd MailLife
@@ -216,7 +173,7 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Create `.env`
+Create a `.env` file
 
 ```env
 GEMINI_API_KEY=YOUR_API_KEY
@@ -230,38 +187,46 @@ streamlit run streamlit_app.py
 
 ---
 
-# 💡 Technologies
+# 💻 Technology Stack
 
-- Python
-- Streamlit
-- Google Gemini API
-- python-dotenv
+- 🐍 Python
+- 🎨 Streamlit
+- 🤖 Google Gemini API
+- 📦 python-dotenv
+- 🧠 Multi-Agent Architecture
 
 ---
 
-# 🎯 Future Improvements
+# 🎯 Roadmap
 
-- 📧 Gmail Integration
-- 📄 PDF Export
-- 🌍 Multi-language Translation
-- 📚 Email History
-- 🤖 More AI Agents
-- ☁ Cloud Deployment
+- ✅ Multi-Agent Workflow
+- ✅ Professional UI
+- ✅ Live Deployment
+- ✅ TXT Export
+- ✅ JSON Export
+- 🔜 Gmail Integration
+- 🔜 PDF Export
+- 🔜 Email History
+- 🔜 Authentication
+- 🔜 Cloud Database
 
 ---
 
 # 👨‍💻 Author
 
-**Reiner Sakunab**
+### Reiner Sakunab
 
 AI & Software Developer
+
+- 🌐 GitHub: https://github.com/Reinerbroww
+- 💼 LinkedIn: *(Add your LinkedIn here)*
 
 ---
 
 <div align="center">
 
-### ⭐ If you like this project, consider giving it a Star!
+## ⭐ Star this repository if you found it useful!
 
-Made with ❤️ using Python & Google Gemini
+Made with ❤️ using **Python**, **Streamlit**, and **Google Gemini**
 
 </div>
