@@ -26,11 +26,11 @@ MODELS = [
 # CONFIG
 # ==========================================================
 
-MAX_RETRY = 5
+MAX_RETRY = 3
 
-INITIAL_DELAY = 2
+INITIAL_DELAY = 1
 
-MAX_DELAY = 20
+MAX_DELAY = 4
 
 # ==========================================================
 # GENERATE

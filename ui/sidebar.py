@@ -90,21 +90,21 @@ def render_sidebar():
 
         st.markdown(
             """
-            ### 🚀 Features
+            ### Features
 
-            ✅ Multi-Agent Workflow
+            Multi-Agent Workflow
 
-            ✅ Email Planner
+            Email Planner
 
-            ✅ AI Email Writer
+            AI Email Writer
 
-            ✅ AI Reviewer
+            AI Reviewer
 
-            ✅ Observability
+            Observability
 
-            ✅ Download TXT
+            Download TXT
 
-            ✅ Download JSON
+            Download JSON
             """
         )
 
